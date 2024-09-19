@@ -4,23 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Physics Simulation</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        #controls {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
+    <link rel='stylesheet' href='{% static "core/css/bootstrap.min.css" %}'>
 </head>
 <body>
     <div id="controls">
@@ -30,16 +14,23 @@
         <label for="force">Force: <span id="forceDisplay">0.05</span></label>
         <input type="range" id="force" min="0.01" max="0.2" step="0.01" value="0.05">
         <br><br>
-        <label for="wind">Wind Speed: <span id="windDisplay">0</span> m/s</label>
-        <input type="range" id="wind" min="-0.05" max="0.05" step="0.01" value="0">
+        <label for="wind">Wind Speed:</label>
+        <input type="range" id="wind" min="-10" max="10" value="0">
+        <span id="windDisplay">0</span>
         <br><br>
+        <label for="gravity">Select Gravity:</label>
+        <select id="gravity">
+        <option value="earth">Earth</option>
+        <option value="moon">Moon</option>
+        <option value="mars">Mars</option>
+        </select>
+        <span id="gravityDisplay">earth</span>
+        <br><br>    
         <button id="launch">Launch</button>
-        <br><br>
-        <button id="earth">Earth Gravity</button>
-        <button id="moon">Moon Gravity</button>
-        <button id="mars">Mars Gravity</button>
     </div>
+    
     <script src="{% static 'core/js/matter.min.js' %}"></script>
     <script src="{% static 'core/js/simulation.js' %}"></script>
+
 </body>
 </html>
