@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STEM Physics Simulation</title>
     <link rel='stylesheet' href='{% static "core/css/bootstrap.min.css" %}'>
+    <link rel='stylesheet' href='{% static "core/css/style.css" %}'>
 </head>
 <body>
     <div id="controls">
@@ -24,13 +25,18 @@
         <option value="moon">Moon</option>
         <option value="mars">Mars</option>
         </select>
-        <span id="gravityDisplay">earth</span>
         <br><br>    
         <button id="launch">Launch</button>
     </div>
+
+    <div class="project-card">
+        <h2 class="project-name">Physics Simulation Project</h2>
+        <p class="student-name">Bekjanow Begjan</p>
+        <p class="student-group">Group 3PI</p>
+      </div>
     
     <script src="{% static 'core/js/matter.min.js' %}"></script>
     <script src="{% static 'core/js/simulation.js' %}"></script>
-
+    <script src="{% static 'core/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
