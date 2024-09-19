@@ -30,9 +30,16 @@
         <label for="force">Force: <span id="forceDisplay">0.05</span></label>
         <input type="range" id="force" min="0.01" max="0.2" step="0.01" value="0.05">
         <br><br>
+        <label for="wind">Wind Speed: <span id="windDisplay">0</span> m/s</label>
+        <input type="range" id="wind" min="-0.05" max="0.05" step="0.01" value="0">
+        <br><br>
         <button id="launch">Launch</button>
+        <br><br>
+        <button id="earth">Earth Gravity</button>
+        <button id="moon">Moon Gravity</button>
+        <button id="mars">Mars Gravity</button>
     </div>
-    <script src="{% static 'matter.min.js' %}"></script>
-    <script src="{% static 'core/simulation.js' %}"></script>
+    <script src="{% static 'core/js/matter.min.js' %}"></script>
+    <script src="{% static 'core/js/simulation.js' %}"></script>
 </body>
 </html>
